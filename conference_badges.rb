@@ -3,9 +3,7 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(attendees)
-  arr = []
-  attendees.each { |a| arr << badge_maker(a) }
-  arr
+  attendees.map { |a| badge_maker(a) }
 end
 
 def assign_rooms(attendees) 
@@ -20,6 +18,3 @@ def printer(attendees)
   batch_badge_creator(attendees).each { |badges| puts badges }
   assign_rooms(attendees).each { |rooms| puts rooms }
 end
-
-
-
