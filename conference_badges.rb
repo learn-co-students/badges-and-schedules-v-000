@@ -7,7 +7,7 @@ def batch_badge_creator(name)
   counter = 0
   messages = Array.new
   name.each do |x| 
-    messages << "Hello, my name is #{name[counter]}."
+    messages << "Hello, my name is #{x}."
     counter += 1
   end
   messages
