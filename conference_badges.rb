@@ -5,13 +5,13 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(names)
-	names.collect! {|x| "Hello, my name is #{x}." }
-	names
+	output1 = names.collect {|x| "Hello, my name is #{x}." }
+	output1
 end
 
 def assign_rooms(names)
-	names.collect! {|x| "Hello, #{x}! You'll be assigned to room #{names.index(x)+1}!" }
-	names
+	output2 = names.collect {|x| "Hello, #{x}! You'll be assigned to room #{names.index(x)+1}!" }
+	output2
 end
 
 def printer(names)
