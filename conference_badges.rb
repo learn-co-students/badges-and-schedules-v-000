@@ -3,9 +3,7 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(array)
-   array.map do |e|
-      badge_maker(e)
-   end
+   array.map {|e| badge_maker(e)}
 end
 
 def assign_rooms(array)
@@ -17,10 +15,6 @@ def assign_rooms(array)
 end
 
 def printer(array)
-   batch_badge_creator(array).each do |e|
-      puts "#{e}"
-   end
-   assign_rooms(array).each do |i|
-      puts "#{i}"
-   end
+   batch_badge_creator(array).each {|e| puts "#{e}"}
+   assign_rooms(array).each {|i| puts "#{i}"}
 end
