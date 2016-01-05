@@ -31,3 +31,6 @@ def printer(names)
     index += 1
   end
 end
+
+people =["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
+printer(people)
