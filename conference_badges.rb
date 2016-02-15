@@ -1,26 +1,35 @@
 # Write your code here.
+require "pry"
 def badge_maker(name)
-  name_array =[]
-  puts "Hello, my name is #{name}."
-  name_array << name
+  return "Hello, my name is #{name}."
 end
 
-def batch_badge_creator(name_array)
-
-  name_array =[Edsger, Ada, Charles, Alan, Grace, Linus, Matz]
-  name_array.each do |name|
-    puts "Hello, my name is #{name}."
+def batch_badge_creator(attendees)
+  attendees =["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
+  badges =[]
+  attendees.map! do |name|
+    badges << "Hello, my name is #{name}."
   end
+  badges
 end
 
-def assign_rooms(name_array)
-  name_array =[Edsger, Ada, Charles, Alan, Grace, Linus, Matz]
-  name_array.each do |name|
-    puts "Hello, #{name}! You'll be assigned to room #{name_array[name]}!"
+
+def assign_rooms(attendees)
+  attendees =["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
+  assignments = []
+  attendees.map.with_index(1) do |name, room|
+    assignments << "Hello, #{name}! You'll be assigned to room #{room}!"
   end
+  assignments
 end
 
-def printer
-  batch_badge_creator(name_array)
-  assign_rooms(name_array)
+
+
+def printer(attendees)
+  batch_badge_creator(attendees).each do |badge|
+    puts badge
+  end
+  assign_rooms(attendees).each do |assign|
+    puts assign
+  end
 end
