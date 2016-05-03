@@ -21,12 +21,25 @@ def assign_rooms(attendees)
   assign_list
 end
 
-
-
-
 def printer(attendees)
+  puts batch_badge_creator(attendees)[0]
+  puts batch_badge_creator(attendees)[1]
+  puts batch_badge_creator(attendees)[2]
+  puts batch_badge_creator(attendees)[3]
+  puts batch_badge_creator(attendees)[4]
+  puts batch_badge_creator(attendees)[5]
+  puts batch_badge_creator(attendees)[6]
 
+  puts assign_rooms(attendees)[0]
+  puts assign_rooms(attendees)[1]
+  puts assign_rooms(attendees)[2]
+  puts assign_rooms(attendees)[3]
+  puts assign_rooms(attendees)[4]
+  puts assign_rooms(attendees)[5]
+  puts assign_rooms(attendees)[6]
 end
+
+
 
 
 
