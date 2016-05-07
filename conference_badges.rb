@@ -5,30 +5,23 @@ end
 names = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
 
 def batch_badge_creator(names)
-	new_array = []
-	names.each {|name|
-		phrase = "Hello, my name is #{name}."
-		new_array << phrase
+    names.map {|name|   #.map creates new array with modified elements
+		"Hello, my name is #{name}."
 	}
-	new_array
 end
 
 def assign_rooms(names)
-	numbers = [1, 2, 3, 4, 5, 6, 7]
-	room_assignments = []
-	names.each_with_index {|name, number|
-		phrase = "Hello, #{name}! You'll be assigned to room #{number + 1}!"
-		room_assignments << phrase
+    names.each_with_index.map {|name, index|   #uses index to assign room numbers with each, uses map to make new array
+		phrase = "Hello, #{name}! You'll be assigned to room #{index+1}!"
 	}
-	room_assignments
 end
 
 def printer(names)
-	batch_badge_creator(names).collect {|attendee|
+	batch_badge_creator(names).each {|attendee|
 			puts attendee
 	}
 
-	assign_rooms(names).collect {|room|
+	assign_rooms(names).each {|room|
 			puts room
 	}
 end
