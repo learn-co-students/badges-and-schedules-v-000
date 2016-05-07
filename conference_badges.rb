@@ -12,7 +12,7 @@ end
 
 def assign_rooms(names)
     names.each_with_index.map {|name, index|   #uses index to assign room numbers with each, uses map to make new array
-		phrase = "Hello, #{name}! You'll be assigned to room #{index+1}!"
+		"Hello, #{name}! You'll be assigned to room #{index+1}!"
 	}
 end
 
