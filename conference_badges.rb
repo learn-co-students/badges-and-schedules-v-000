@@ -1,7 +1,7 @@
 # Write your code here.
 
 def badge_maker(name)
-    return "Hello, my name is #{name}." 
+    "Hello, my name is #{name}." 
 end
 
 
@@ -21,14 +21,12 @@ end
 
 def printer(items)
 
-  items.each do |item|
-    puts badge_maker(item)
+  batch_badge_creator(items).each do |item|
+    puts item
   end
 
-  counter = 1 
-  items.each do |item|
-    puts "Hello, #{item}! You'll be assigned to room #{counter}!"
-    counter += 1 
+  assign_rooms(items).each do |item|
+    puts item
   end
 
 
