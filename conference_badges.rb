@@ -1,28 +1,23 @@
-name = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
-
+require 'pry'
 def badge_maker(name)
   "Hello, my name is #{name}."
 end
 
-def batch_badge_creator(name)
-  name.collect{|speakers| "Hello, my name is #{speakers}."}
+def batch_badge_creator(attendees)
+  attendees.collect do |attendee| #returns new array with greetings
+    "Hello, my name is #{attendee}."
+  end
 end
 
-def assign_rooms(name)
-  counter = 1
-  name.each do |speaker|
-    room_assignments = []
-    room_assignments.push("Hello, #{speaker}! You'll be assigned to room #{counter}!")
-    counter += 1
+def assign_rooms(attendees)
+  assignment = []
+  attendees.each_with_index do |attendee, num| #index numbers start at 0, must add 1 to equal proper room num
+    assignment << "Hello, #{attendee}! You'll be assigned to room #{num + 1}!"
   end
-  room_assignments
+  assignment
 end
 
-def printer(name)
-  batch_badge_creator(name).each do |print_badge|
-    puts print_badge
-  end
-  assign_rooms(name).each do |print_rooms|
-    puts print_rooms
-  end
+def printer(attendees)
+  batch_badge_creator(attendees).each{ |greeting| puts greeting}
+  assign_rooms(attendees).each{ |assignment| puts assignment}
 end
