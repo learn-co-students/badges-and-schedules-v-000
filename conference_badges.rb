@@ -31,5 +31,5 @@ end
 def printer(array)
   #array.each {|x| puts "Hello, my name is #{x}."}
   batch_badge_creator(array).each {|x| puts x}
-  array.each.with_index {|x, index| puts "Hello, #{x}! You'll be assigned to room #{index+1}!"}
+  assign_rooms(array).each {|x| puts x}
 end
