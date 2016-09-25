@@ -13,11 +13,10 @@ end
 
 def assign_rooms(attendees, room)
   room = [1,2,3,4,5,6,7]
-  %w(room_assignments).each_with_index [ |attendees, room|
+  %w(room_assignments).each_with_index { |attendees, room|
     assign_rooms[attendees] = rooms
-]
+  }
   puts "Hello, #{attendees}! You'll be assigned to room #{rooms}!"
-  end
   end
   room_assignments
 end
