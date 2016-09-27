@@ -24,23 +24,15 @@ def assign_rooms(attendees)
 end
 
 def printer(attendees)
-  batch_badge_creator
-  assign_rooms
-  #badges_and_room_assignments.each_line do |line|
-  #end
-  #puts badges.each do
-    #end
-  #puts room_assignments.each do
-    #end
-  #puts badges
-  #puts room_assignments
-  #puts "#{badges}, #{room_assignments}"
-  #puts printer(attendees)
-  #puts attendees
+  batch_badge_creator(attendees).each do |attendee|
+  		puts attendee
+  end
+  assign_rooms(attendees).each do |attendee|
+      puts attendee
+  end
 end
 
-
-
+#attendees.collect {|catch_badge_creator|attendee}."}
 
 
 
