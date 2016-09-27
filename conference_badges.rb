@@ -30,5 +30,3 @@ def printer(attendees)
       puts attendee
   end
 end
-
-#attendees.collect {|catch_badge_creator|attendee}."}
