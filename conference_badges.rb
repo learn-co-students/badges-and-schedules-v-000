@@ -16,23 +16,30 @@ end
 #attendees.collect {|badges|puts"Hello, my name is #{attendees}."}
 #end
 
-def assign_rooms
-attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
-(1..7).each {attendees do |room_assignments|}
-
+def assign_rooms(attendees)
+  attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
+  %w(1 2 3 4 5 6 7).each_with_index { |attendees, room_assignments|}
     "Hello, #{attendees}! You'll be assigned to room #{room_assignments}!"
   room_assignments
 end
 
-#hash=hash.new
-#%w(Edsger, Ada, Charles, Alan, Grace, Linus, Matz).each_with_index { |item, index|
-#hash[item] = index
+def printer(attendees)
+  badges_and_room_assignments.each_line do |line|
+  end
+  #puts badges.each do
+    #end
+  #puts room_assignments.each do
+    #end
+  #puts badges
+  #puts room_assignments
+  #puts "#{badges}, #{room_assignments}"
+  #puts printer(attendees)
+  #puts attendees
+end
 
-#%w(room_assignments).each_with_index { |attendees, room|}
-# =>assign_rooms[attendees] = rooms
 
-#%w(attendees).each_with_index { |rooms, index|
-#attendees[item] = index
+
+
 
 
 #binding.pry
