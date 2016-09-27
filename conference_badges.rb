@@ -1,4 +1,3 @@
-#require 'pry'
 # Write your code here.
 def badge_maker(name)
   return "Hello, my name is #{name}."
@@ -33,8 +32,3 @@ def printer(attendees)
 end
 
 #attendees.collect {|catch_badge_creator|attendee}."}
-
-
-
-#binding.pry
-#1+1
