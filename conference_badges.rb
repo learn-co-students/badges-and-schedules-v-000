@@ -11,10 +11,6 @@ end
 badges
 end
 
-#attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
-#attendees.collect {|badges|puts"Hello, my name is #{attendees}."}
-#end
-
 def assign_rooms(attendees)
   attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
   %w(1 2 3 4 5 6 7).each_with_index { |attendees, room_assignments|}
