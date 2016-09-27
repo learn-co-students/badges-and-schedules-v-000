@@ -18,8 +18,8 @@ end
 
 def assign_rooms
 attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
-(1..7).each attendees do |room_assignments|
-  end
+(1..7).each {attendees do |room_assignments|}
+
     "Hello, #{attendees}! You'll be assigned to room #{room_assignments}!"
   room_assignments
 end
