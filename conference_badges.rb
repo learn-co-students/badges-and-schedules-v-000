@@ -24,20 +24,28 @@ def batch_badge_creator (attendees)
       #binding.pry
     return attendees2
 end
-require 'pry'
-def assign_rooms (attendees, room_assignments)
+def assign_rooms(room_assignments)
   binding.pry
-  room_assignments = []
+  attendees2 = []
+  attendees.each do |name|
+   #binding.pry
+   attendees.each_with_index {|item, index|
+   attendees[item] = index}
+   binding.pry
+   attendees2 << "Hello, #{name} You'll be assigned to room #{index}!"
+              end
+  #room_assignments = [1,2,3,4,5,6,7]
   #pseudocode 
-  #says a list of speakers called attendees
   #says a 2nd array is the list of rooms 1-7 called rooms
+  #says a list of speakers called attendees
+  #return room_assignments
+  #binding.pry
   #says a 3rd array is needed to say "list 1, you'll be assigned to list 2"
   #so iterate through list one with iterator each and track
   #each index number with enum method each_with_index
   #and push to 3rd array, the outputstring of "list 1 and list 2"
-  binding.pry
-    #attendees.each_with_index|index|
-    #binding.pry
+  #binding.pry
+  #binding.pry
     #index = attendees[]
     #room = [1,2,3,4,5,6,7]
     #index2 = room
