@@ -18,6 +18,10 @@ end
 return speakers
 end
 
+def printer(attendees)
+  puts batch_badge_creator(attendees)
+  puts assign rooms(attendees)
+end
 # Write your code here.
 
 
