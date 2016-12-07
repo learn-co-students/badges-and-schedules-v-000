@@ -19,13 +19,12 @@ return speakers
 end
 
 def printer(attendees)
-  puts batch_badge_creator(attendees)
-  puts assign rooms(attendees)
+  batch_badge_creator(attendees).each do |badge|
+    puts "#{badge}"
+  end
+
+  assign_rooms(attendees).each do |assignment|
+    puts "#{assignment}"
+  end
+
 end
-# Write your code here.
-
-
-#primary_colors = ["Red", "Yellow", "Blue"]
-#primary_colors.each do |color|
-#  puts "Primary Color #{color} is #{color.length} letters long."
-#end
