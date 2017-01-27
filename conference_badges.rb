@@ -19,11 +19,17 @@ def assign_rooms(name_array)
   new_array
 end
 
+# def printer(name_array)
+#   batch_badge_creator(name_array).each do | arbit |
+#     puts arbit
+#   end
+#   assign_rooms(name_array).each do | arb |
+#     puts arb
+#   end
+# end
+
 def printer(name_array)
-  batch_badge_creator(name_array).each do | arbit |
-    puts arbit
-  end
-  assign_rooms(name_array).each do | arb |
-    puts arb
-  end
+  batch_badge_creator(name_array).each do {| arbit | : puts arbit}
+
+  assign_rooms(name_array).each do {| arb | : puts arb}
 end
