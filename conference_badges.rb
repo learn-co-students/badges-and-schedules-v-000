@@ -29,7 +29,7 @@ end
 # end
 
 def printer(name_array)
-  batch_badge_creator(name_array).each do {| arbit | : puts arbit}
+  batch_badge_creator(name_array).each {|arbit| puts arbit}
 
-  assign_rooms(name_array).each do {| arb | : puts arb}
+  assign_rooms(name_array).each {|arb| puts arb}
 end
