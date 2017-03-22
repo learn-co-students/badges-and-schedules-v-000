@@ -30,4 +30,3 @@ def printer(speakers)
     puts room
   end
 end
-
