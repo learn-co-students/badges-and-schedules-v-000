@@ -1,7 +1,7 @@
 speakers = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
 
 def badge_maker(name)
-  return "Hello, my name is #{name}."
+  "Hello, my name is #{name}."
 end
 
 def batch_badge_creator(array)
@@ -9,17 +9,15 @@ def batch_badge_creator(array)
 end
 
 def assign_rooms(array)
-  rooms = []
-  array.each_with_index{|name, index| rooms << "Hello, #{name}! You'll be assigned to room #{index + 1}!"}
-  rooms
+  array.each_with_index.collect{|name, index| "Hello, #{name}! You'll be assigned to room #{index + 1}!"}
 end
 
-def printer(people)
-  batch_badge_creator(people).each do |badge|
+def printer(speakers)
+  batch_badge_creator(speakers).each do |badge|
     puts badge
   end
 
-  assign_rooms(people).each do |room|
+  assign_rooms(speakers).each do |room|
     puts room
-  end  
+  end
 end
