@@ -33,10 +33,10 @@ def assign_rooms(speakers)
 end
 
 def printer(speakers)
-  speakers.each do |person|
-      puts batch_badge_creator(person)
-      puts assign_rooms(person)
-  end
+  puts batch_badge_creator(speakers)
+  puts assign_rooms(speakers)
 end
 
-assign_rooms(speakers)
+#puts batch_badge_creator(speakers)
+#puts assign_rooms(speakers)
+printer(speakers)
