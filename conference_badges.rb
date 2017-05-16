@@ -17,11 +17,10 @@ def assign_rooms(attendees)
 end
 
 def printer(attendees)
-  badges_and_room_assignments = []
-  badges_and_room_assignments << batch_badge_creator(attendees)
-  badges_and_room_assignments.push(room_assignments)
+  batch_badge_creator(attendees).zip(assign_rooms(attendees))
 
-  badges_and_room_assignments.each do |badges_and_room_assignments|
-    puts badges_and_room_assignments
+  batch_badge_creator(attendees).zip(assign_rooms(attendees)).each do |badge, assignment|
+    puts badge
+    puts assignment
   end
 end
