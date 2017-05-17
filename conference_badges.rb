@@ -13,14 +13,13 @@ def batch_badge_creator(array)
 end
 
 def assign_rooms(array)
-    array_return = []
-    index = 0
-    array.collect { |element|
-        array_return << "Hello, #{element}! You'll be assigned to room #{index + 1}!"
-        index+= 1
-    }
-    array_return
+  array_r = []
+  array.each_with_index{ |element, index|
+    array_r << "Hello, #{element}! You'll be assigned to room #{index + 1}!"
+  }
+  array_r
 end
+
 
 def printer(array)
   batch_badge_creator(array).each{ |element| puts element}
