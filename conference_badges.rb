@@ -17,7 +17,7 @@ end
 # argument and returns an array of badge messages.
 
 def batch_badge_creator(speakers)
-  speakers.collect {|speaker| badge_maker(speaker)}
+  speakers.map{|speaker| badge_maker(speaker)}
 end
 
 # You just realized that you also need to give each speaker a room assignment.
@@ -48,9 +48,7 @@ end
 # => [1, 2, 3, 4, 5]
 
 def assign_rooms(speakers)
-  room_list = []
-  speakers.each_with_index{|speaker, index| room_list << "Hello, #{speaker}! You'll be assigned to room #{index + 1}!"}
-  room_list
+  speakers.each_with_index.map{|speaker, index| "Hello, #{speaker}! You'll be assigned to room #{index + 1}!"}
 end
 
 # Now you have to tell the printer what to print. Create a method called printer
