@@ -7,14 +7,19 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(attendees)
-  attendees.map do |attendee|
-    "Hello, my name is #{attendee}."
+    attendees.collect do |name|
+    badge_maker(name)
+    #attendees.map do |attendee|
+    #{}"Hello, my name is #{attendee}."
   end
 end
 
 def assign_rooms(attendees)
-  attendees.each_with_index.map do |attendee, index|
-  "Hello, #{attendee}! You'll be assigned to room #{index + 1}!"
+  #attendees.each_with_index.map do |attendee, index|
+  #{}"Hello, #{attendee}! You'll be assigned to room #{index + 1}!"
+  num=0
+  attendees.collect do |name| num += 1
+  "Hello, #{name}! You'll be assigned to room #{num}!"
   end
 end
 
