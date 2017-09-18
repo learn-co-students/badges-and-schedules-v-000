@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 # Write your code here.
 
+=======
+>>>>>>> 7d943e5730ef654726a7f94071e34e0cda2d5cb0
 
 def badge_maker(name)
   "Hello, my name is #{name}."
