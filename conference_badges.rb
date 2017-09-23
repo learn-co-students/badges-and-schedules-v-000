@@ -28,5 +28,13 @@ def printer(array)
   end
 end
 
-
-printer(speakers)
+# ////////// ALTERNATIVE OPTION FOR PRINTER ///////////
+# def printer(attendees)
+#   batch_badge_creator(attendees).each do |badge|
+#     puts badge
+#   end
+#
+#   assign_rooms(attendees).each do |assignment|
+#     puts assignment
+#   end
+# end
