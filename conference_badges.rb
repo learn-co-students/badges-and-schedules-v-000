@@ -24,7 +24,7 @@ def assign_rooms(attendees)
   end
 end
 
-#define #printer to print out array from above
+#define #printer to print out array from above, with #batch_badge_creator & #assign_rooms methods
 def printer(attendees)
   batch_badge_creator(attendees).each do |badge|
     puts badge
