@@ -36,3 +36,9 @@ def printer(list) # can refactor this to batch_badge_creator(list).each do
   badges.each {|all| puts all}
   rooms.each {|all| puts all}
 end
+
+# def printer(list)
+    batch_badge_creator(list).each do |name| puts name
+    assign_rooms(attendees).each do |index| puts index
+   end
+end
