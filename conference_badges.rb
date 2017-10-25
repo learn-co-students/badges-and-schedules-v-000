@@ -9,7 +9,7 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(list)
-  list.map do |attendee| "Hello, my name is #{attendee}."
+  list.map do |attendee| "Hello, my name is #{attendee}." # can refactor this to badge_maker(name)
   end
 end
 
@@ -30,8 +30,8 @@ def assign_rooms(attendees)
   result
 end
 
-def printer(list)
-  badges = batch_badge_creator(list)
+def printer(list) # can refactor this to batch_badge_creator(list).each do
+  badges = batch_badge_creator(list) # and assign_rooms(attendees).each do and iterate through and print.
   rooms = assign_rooms(attendees)
   badges.each {|all| puts all}
   rooms.each {|all| puts all}
