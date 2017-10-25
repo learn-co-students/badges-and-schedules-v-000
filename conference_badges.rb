@@ -39,6 +39,6 @@ end
 
 # def printer(list)
     batch_badge_creator(list).each do |name| puts name
-    assign_rooms(attendees).each do |index| puts index
+    assign_rooms(attendees).each do |room_assign| puts room_assign
    end
 end
