@@ -17,6 +17,7 @@ def assign_rooms(attendees)
   return room_assignments
 end
 
+
 def printer(attendees)
   batch_badge_creator(attendees).each_with_index {|attendee, room|
     puts attendee
@@ -26,9 +27,17 @@ end
 
 #ANOTHER WAY TO WRITE PRINTER - use .zip method
 #.zip collects an element from each array and returns a resulting collected array
+
 #def printer(attendees)
 #  batch_badge_creator(attendees).zip(assign_rooms(attendees)).each do |attendee, room|
 #    puts attendee
 #    puts room
 #  end
 #end
+
+def printer(attendees)
+  batch_badge_creator(attendees).each_with_index {|attendee, room|
+    puts attendee
+    puts assign_rooms(attendees)[room]
+  }
+end
