@@ -15,16 +15,7 @@ def assign_rooms(speakers)
   assignment
 end
 
-def printer
-  batch = batch_badge_creator(array)
-  assignment = assign_rooms(speakers)
-  x = 0
-  while x < batch.length
-    puts batch[x]
-    X += 1
-  end
-  while x < assignment.length
-    puts assignment[x]
-    X += 1
-  end
+def printer(array)
+  batch_badge_creator(array).each {|badge| puts badge}
+  assign_rooms(array).each {|assignment| puts assignment}
 end
