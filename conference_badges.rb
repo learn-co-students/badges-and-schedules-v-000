@@ -13,10 +13,11 @@ def batch_badge_creator(array)
 end
 
 def assign_rooms(attendees)
-    
+
 end
 
 def printer(attendees)
     puts batch_badge_creator(attendees)
     puts assign_rooms(attendees)
+>>>>>>> ef3449f687f4eb8d2f9b2160b24dbd91a624d607
 end
