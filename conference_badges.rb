@@ -13,10 +13,13 @@ def batch_badge_creator(array)
 end
 
 def assign_rooms(names)
-
+  names.collect.with_index do |name, index|
+    index_plus_one = index + 1
+    "Hello, #{name}! You'll be assigned to room #{index_plus_one}!"
+  end
 end
 
-def printer(attendees)
-    puts batch_badge_creator(array)
-    puts assign_rooms(names)
+def printer(names)
+  batch_badge_creator(names)
+  assign_rooms(names)
 end
