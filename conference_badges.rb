@@ -1,25 +1,37 @@
-# Write your code here
-formatted_batch = []
-def badge_maker(array)
-  formatted_batch = []
-  array.each do |element| formatted_batch  <<  "Hello, my name is #{element}." end
-  return formatted_batch
+
+speakers = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
+name = " "
+def badge_maker(name)
+    "Hello, my name is #{name}."
 end
 
-def batch_badge_creator(array)
-    array.each do |element| puts  "Hello, my name is #{element}." end
+badge_maker(name)
 
+def batch_badge_creator(speakers)
+  speakers.each do   |speaker|
+    "Hello, my name is #{speaker}."
+  end
 end
 
-def assign_rooms(array)
-    batch_array = []
-    array.each_with_index do |element, index| batch_array <<  "Hello, #{element}! You'll be assigned to room #{index + 1 }!"
-     end
-    batch_array
+
+def assign_rooms(speakers)
+    speakers.each_with_index do |speaker, index|
+      "Hello, #{speaker}! You'll be assigned to room #{index + 1 }!"
+    end
 end
 
-def printer ()
+def printer(speakers)
+  batch_badge_creator(speaker).each do |badge|
+    puts badge
+  end
 
+  assign_rooms(speaker).each do |room_assignment|
+    puts room_assignment
+  end
 end
-array = ["tim", "jim"]
-badge_maker(array)
+
+
+formatted_batch = batch_badge_creator(array)
+printer (formatted_batch)
+assign_room_array = assign_rooms(array)
+printer (assign_room_array)
