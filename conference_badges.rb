@@ -1,4 +1,5 @@
 # Write your code here.
+
 def badge_maker(name)
   return "Hello, my name is #{name}."
 end
@@ -14,8 +15,7 @@ end
 
 def printer(name)
   badge_n = batch_badge_creator(name)
-  assign_n = assign_rooms(name)
-   
   badge_n.each {|n| puts n }
+  assign_n = assign_rooms(name)
   assign_n.each {|n| puts n }
 end
