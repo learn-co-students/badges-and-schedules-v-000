@@ -4,27 +4,18 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(names_array)
-  badge_messages_array = []
-  names_array.each do |name|
-    badge_messages_array << badge_maker(name)
-  end
-  badge_messages_array
+  message_array = []
+  names_array.each {|name| message_array << "Hello, my name is #{name}."}
+  message_array
 end
 
-def assign_rooms(names_array)
-  rooms_array = []
-  names_array.each_with_index do |name, index|
-    room_number = index + 1
-    rooms_array << "Hello, #{name}! You'll be assigned to room #{room_number}!"
-  end
-  rooms_array
+def assign_rooms(attendees)
+  room_assignments = []
+  attendees.each_with_index {|attendee, index| room_assignments << "Hello, #{attendee}! You'll be assigned to room #{index+1}!"}
+  room_assignments
 end
 
-def printer(names_array)
-  batch_badge_creator(names_array).each do |badge_message|
-    puts badge_message
-  end
-  assign_rooms(names_array).each do |room_message|
-    puts room_message
-  end 
+def printer(attendees)
+  batch_badge_creator(attendees).each {|message| puts "#{message}"}
+  assign_rooms(attendees).each {|message| puts "#{message}"}
 end
