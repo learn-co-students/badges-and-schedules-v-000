@@ -20,25 +20,3 @@ def printer(a)
   batch_badge_creator(a).each {|strings| puts "#{strings}"}
   assign_rooms(a).each {|strings| puts "#{strings}"}
 end
-
-
-
-
-
-
-
-
-
-
-#
-# def assign_rooms(list)
-#   array = []
-#   list.each_with_index do |name, room|
-#   array.push("Hello, #{name}! You'll be assigned to room #{room + 1}!")
-#   end
-# end
-#
-# def printer(names)
-#   batch_badge_creator(names).each {|badge| puts "#{badge}"}
-#   assign_rooms(names).each {|greeting| puts "#{greeting}"}
-# end
