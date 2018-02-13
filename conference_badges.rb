@@ -1,4 +1,4 @@
-
+require "pry"
 def badge_maker(name)
 return "Hello, my name is #{name}."
 end
@@ -14,14 +14,21 @@ end
 
 def assign_rooms (array)
 
-  array_new = [1,2,3,4,5,6,7]
+  array_new = (1..array.length).to_a
 
   assigned = array_new.zip(array)
+  assigned.map! {|attendee|   "Hello, #{attendee[1]}! You'll be assigned to room #{attendee[0]}!"}
 
+end
 
+def printer(array)
+ array_badge = batch_badge_creator(array)
 
-  end
+ array_rooms = assign_rooms(array)
 
-  return "Hello, #{array}! You'll be assigned to room #{assigned}!"
+ array_badge.each {|array| puts array}
 
+ array_rooms.each {|room| puts room}
+
+#binding.pry
 end
