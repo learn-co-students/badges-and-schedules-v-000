@@ -23,6 +23,11 @@ end
 
 
 
-def printer
-  return 
+def printer(names)
+  assign_rooms(names).each do |name|
+    puts name
+  end
+  batch_badge_creator(names). each do |badge|
+    puts badge
+  end
 end
