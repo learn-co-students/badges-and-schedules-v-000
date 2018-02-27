@@ -6,15 +6,23 @@ def badge_maker(names)
 end
 
 def batch_badge_creator(names)
-  names.each do |name|
-    return "Hello, my name is #{name}."
+  names.map do |name|
+     "Hello, my name is #{name}."
   end
 end
 
 def assign_rooms(names)
-  counter = 1
+  counter = 0
+  rooms = []
   names.each do |name|
-  return "Hello, #{name}! You'll be assigned to room #{counter}!"
-  counter += 1
+    counter += 1
+   rooms.push("Hello, #{name}! You'll be assigned to room #{counter}!")
   end
+  return rooms
+end
+
+
+
+def printer
+  return 
 end
