@@ -26,7 +26,7 @@ end
 def assign_rooms(attendees)
   welcome_list = []
   attendees.each_with_index {|person, index|
-    assignment = "Hello, #{person}! You'll be assigned to room #{index+1}!"
+    assignment = "Hello, #{person}! You'll be assigned to room #{index + 1}!"
     welcome_list << assignment
   }
   welcome_list
