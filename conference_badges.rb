@@ -4,13 +4,19 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(attendees)
-  badge_batch = []
-  attendees.each do |name|
-    y = "Hello, my name is #{name}."
-    badge_batch << y
-  end
-  badge_batch
+  attendees.collect { |name|
+    "Hello, my name is #{name}."
+  }
 end
+#attempting to refine method by using collect instead of each
+# def batch_badge_creator(attendees)
+#   badge_batch = []
+#   attendees.each do |name|
+#     y = "Hello, my name is #{name}."
+#     badge_batch << y
+#   end
+#   badge_batch
+# end
 
 # def assign_rooms(attendees)
 #   welcome_list = []
