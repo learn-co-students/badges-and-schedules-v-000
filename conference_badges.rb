@@ -8,7 +8,7 @@ def batch_badge_creator(attendees)
     "Hello, my name is #{name}."
   }
 end
-#attempting to refine method by using collect instead of each
+#attempting to refine method by using collect instead of each. Done! Wow, so much more efficient!
 # def batch_badge_creator(attendees)
 #   badge_batch = []
 #   attendees.each do |name|
