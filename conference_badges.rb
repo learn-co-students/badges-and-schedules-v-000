@@ -1,22 +1,41 @@
+require 'pry'
+
 def badge_maker(name)
   "Hello, my name is #{name}."
 end
 
-def batch_badge_creator(name)
-  list = []
-  name.each {|n| list << "Hello, my name is #{n}."}
-  list
-end
-
-def assign_rooms(chart)
-  list = []
-  chart.each_with_index do |a, b|
-    list<<"Hello, #{a}! You'll be assigned to room #{b+1}!"
+def batch_badge_creator(attendees)
+  attendees.map do |attendee|
+    badge_maker(attendee)
   end
-  list
 end
 
-def printer(a)
-  batch_badge_creator(a).each {|strings| puts "#{strings}"}
-  assign_rooms(a).each {|strings| puts "#{strings}"}
+def assign_rooms(attendees)
+
+  attendees.each_with_index.map do |attendee, room|
+    "Hello, #{attendee}! You'll be assigned to room #{room + 1}!"
+  end
 end
+
+def printer(attendees)
+  batch_badge_creator(attendees).each do |attendee|
+    puts "#{attendee}"
+  end
+  assign_rooms(attendees).each do |attendee|
+    puts "#{attendee}"
+  end
+end
+
+
+
+
+
+
+
+
+
+
+# def printer(a)
+#   batch_badge_creator(a).each {|strings| puts "#{strings}"}
+#   assign_rooms(a).each {|strings| puts "#{strings}"}
+# end
