@@ -19,15 +19,14 @@ def assign_rooms(attendees)
 end
 
 def printer(attendees)
-  batch_badge_creator(attendees)
-  arr = []
-  assign_rooms(attendees).each do |assignment|
-    arr << assignment
+  batch_badge_creator(attendees).each do |assignment|
+    puts assignment
   end
-  print batch_badge_creator(attendees)
-  print arr
+  
+  assign_rooms(attendees).each do |assignment|
+    puts assignment
+  end
 end
-
 
 
   
