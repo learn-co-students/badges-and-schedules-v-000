@@ -30,12 +30,15 @@ def assign_rooms(attendees)
 end
 
 def printer(attendees)
-  count = 1
+  batch_badge_array = batch_badge_creator(attendees)
+  room_assignments = assign_rooms(attendees)
 
-  attendees.each do |attendee|
-    puts "Hello, my name is #{attendee}."
-    puts "Hello, #{attendee}! You'll be assigned to room #{count}!"
-    count += 1
+  batch_badge_array.each do |badge|
+    puts badge
+  end
+
+  room_assignments.each do |assignment|
+    puts assignment
   end
 
 end
