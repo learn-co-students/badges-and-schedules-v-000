@@ -1,4 +1,4 @@
-
+require "pry"
 def badge_maker(name)
    return "Hello, my name is #{name}."
 end
@@ -20,14 +20,21 @@ def assign_rooms(attendees)
 end
 
 
+def printer(attendees)
+  binding.pry
+  z = []
+    batch_badge_creator(attendees).each do |welcome_message|
+      z.push(welcome_message)
+    end
+       batch_badge_creator(attendees).each do |welcome_message|
+      z.push(welcome_message)
+    end
+    z
+end
 
-# def assign_rooms(attendees)
-#     x = []
-#     attendees.each_with_index do |name, room| 
-#     "Hello, #{name}! You'll be assigned to room #{room.next}!"
-#     x.push(attendees.each_with_index)
-#   end
-#     x
-# end
+
+
+
+
 
 
