@@ -14,23 +14,20 @@ end
 def assign_rooms(attendees)
     x = []
     attendees.each_with_index do |name, room| 
-    return "Hello, #{name}! You'll be assigned to room #{room.next}!"
-    x.push(attendees.each_with_index)
+    x.push("Hello, #{name}! You'll be assigned to room #{room.next}!")
   end
     x
 end
 
 
-# brothers = ["Tim", "Tom", "Jim"]
-# brothers.each do |hippo|
-#   puts "Stop hitting yourself #{hippo}!"
-# end
 
-
-# def square_array(array)
-#   num = []
-#   array.each do |number|
-#   num.push(number * number)
+# def assign_rooms(attendees)
+#     x = []
+#     attendees.each_with_index do |name, room| 
+#     "Hello, #{name}! You'll be assigned to room #{room.next}!"
+#     x.push(attendees.each_with_index)
 #   end
-#   num
+#     x
 # end
+
+
