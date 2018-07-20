@@ -1,4 +1,4 @@
-require "pry"
+
 def badge_maker(name)
    return "Hello, my name is #{name}."
 end
@@ -21,15 +21,16 @@ end
 
 
 def printer(attendees)
-  binding.pry
   z = []
     batch_badge_creator(attendees).each do |welcome_message|
       z.push(welcome_message)
     end
-       batch_badge_creator(attendees).each do |welcome_message|
-      z.push(welcome_message)
+    assign_rooms(attendees).each do |room_message|
+      z.push(room_message)
     end
-    z
+    z.each do |full_message|
+    puts full_message
+    end
 end
 
 
