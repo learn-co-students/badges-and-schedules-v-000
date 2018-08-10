@@ -14,6 +14,8 @@ end
 #batch_badge_creator(arr)
 
 def assign_rooms(speaker_list)
+  # Note that this works as well:
+  # speaker_list.collect.with_index do |speaker, index| ...code... end
   speaker_list.each_with_index.collect do |speaker, index|
     "Hello, #{speaker}! You'll be assigned to room #{index + 1}!"
     #binding.pry
