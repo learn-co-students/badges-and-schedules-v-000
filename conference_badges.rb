@@ -12,11 +12,7 @@ def assign_rooms(array) #take an array of guests and creates a new array that as
   room_assignments
 end
 
-def printer(attendees)
-counter = 0
-  while counter < attendees.size
-    puts batch_badge_creator(attendees)[counter]
-    puts assign_rooms(attendees)[counter]
-    counter += 1
-  end
+def printer(attendees) #take arrays from previously defined methods and outputs the individual results from each
+  batch_badge_creator(attendees).each {|badge| puts badge}
+  assign_rooms(attendees).each {|room| puts room}
 end
