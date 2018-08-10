@@ -16,6 +16,7 @@ end
 def assign_rooms(speaker_list)
   speaker_list.each_with_index.collect do |speaker, index|
     "Hello, #{speaker}! You'll be assigned to room #{index + 1}!"
+    #binding.pry
   end
 end
 
