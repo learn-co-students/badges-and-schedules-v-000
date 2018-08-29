@@ -10,6 +10,14 @@ def batch_badge_creator(names)
   new_arr
 end
 
+
+
 def assign_rooms(names)
+  names.each_with_index do |name, index|
+    
+end
+
+
+def printer
   
 end
