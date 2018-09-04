@@ -4,14 +4,14 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(attendees)
-  conference_badges = []
+  badges = []
 
   attendees.each do |attendee|
     puts "Hello, my name is #{attendee}."
-    conference_badges << "Hello, my name is #{attendee}."
+    badges << "Hello, my name is #{attendee}."
   end
 
-  conference_badges
+  badges
 end
 
 def assign_rooms(attendees)
@@ -28,5 +28,4 @@ end
 def printer(attendees)
     batch_badge_creator(attendees)
     assign_rooms(attendees)
-
 end
