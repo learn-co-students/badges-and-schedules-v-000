@@ -3,7 +3,7 @@ def badge_maker(name)
  "Hello, my name is #{name}."  #do block, if statement, def = ends
 end
 
- def batch_badge_creator(names_array) #comment out command forward slash or ctrl
+ def batch_badge_creator(names_array) #comment out command #forward slash or ctrl
    badges_array = []  #clear 
    names_array.each do |name|
    badges_array << badge_maker(name)
@@ -24,6 +24,15 @@ def assign_rooms(speakers)
   end
  end 
  
- def printer
-   
-   
+ def printer(names_array)
+  # attendees.each do |token|
+  puts batch_badge_creator(names_array).each do 
+  puts assign_rooms(speakers)
+end
+
+#def printer(names_array)
+# 	my_new_array = batch_badge_creator(names_array)
+#  my_new_array.each do |token|
+#  puts token
+#end
+#end
