@@ -7,27 +7,29 @@
     #speakers = [ "Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
     speakers.map do | name |  
       "Hello, my name is #{name}."
-    end
+      end
   end
     
-  
 
-  
-  def assign_rooms(names)
+  def assign_rooms(name)
      
-    names.each_with_index.map do |name, index|
+    name.each_with_index.map do |name, index|
      "Hello, #{name}! You'll be assigned to room #{index + 1}!" 
-    end
-    
+        end
   end
-  
-  
-  # def printer
-  #   printer.collect { |name| |room| }
-  #   puts "Hello, my name is #{name}! You'll be assigned to room #{room}!"
-  
-  # end
-  
+    
+
+  def printer(name)
+  batch_badge_creator(name).each do | badge|
+    puts badge
+        end
+
+  assign_rooms(name).each do | assignment|
+    puts assignment
+        end 
+
+end
+
 
 
 
