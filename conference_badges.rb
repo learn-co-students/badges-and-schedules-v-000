@@ -1,19 +1,24 @@
 require 'pry'
+
+attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
+
 def badge_maker(name)
-  attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
   "Hello, my name is #{name}."
 end 
 
 def batch_badge_creator(attendees)
-    attendees = []
-    attendees.each do |name|
-    "Hello, my name is #{name}."
+    attendees.collect{|name| "Hello, my name is #{name}."}
+end  
+
+def assign_rooms(attendees)
+  assignment = Array.new
+  attendees.each_with_index do |attendee, index|
+  assignment.push("Hello, #{attendee}! You'll be assigned to room #{index+1}!")
   end
-end 
+    assignment
+end
 
-def assign_rooms(name, room)
-  each_with_index enumerator method 
-end 
-
-def print(batch_badge_creator, assign_rooms)
-end 
+def printer(attendees)
+  batch_badge_creator(attendees).each {|line| puts line}
+  assign_rooms(attendees).each {|line2| puts line2}
+end
