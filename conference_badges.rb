@@ -21,6 +21,10 @@ def printer(attendees)
   assign_rooms(attendees).each {|line2| puts line2}
 end
 
+
+
+
+
 # def batch_badge_creator(attendees)
 #   attendees.map do |attendee|
 #     "Hello, my name is #{attendee}."
