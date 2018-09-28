@@ -52,8 +52,12 @@ TEXT
 }
 
   describe '#badge_maker' do
-
+  
     # Question 1
+    
+  def badge_maker(name)
+      puts "Hello, my name is #{name}."
+    end 
 
     it 'should return a formatted badge' do
       expect(badge_maker(name)).to eq("Hello, my name is #{name}.")
@@ -64,6 +68,11 @@ TEXT
   describe '#batch_badge_creator' do
 
     # Question 2b
+  
+    def batch_badge_creator(attendees)
+    batch_badge_creator.each do |name|
+      puts "Hello, my name is #{name}."
+    end 
 
     it 'should return a list of badge messages' do
       expect(batch_badge_creator(attendees)).to eq(badges)
@@ -77,6 +86,15 @@ TEXT
   describe '#assign_rooms' do
 
     # Question 3
+
+    def assign_rooms(attendees)
+      counter = 1
+      assign_rooms.each do |attendee|
+      puts "Hello, #{attendee}. You'll be assigned to room #{counter}!"
+        counter += 1
+      end
+    end 
+      
 
     it 'should return a list of welcome messages and room assignments' do
       expect(assign_rooms(attendees)).to eq(room_assignments)
@@ -94,6 +112,15 @@ TEXT
     # the badges and room assignments one at a time.
     # To make this test pass, make sure you are iterating through your badges and room assignments lists.
 
+def printer(attendees)
+  batch_badge_creator(attendees).each do |name|
+    puts name
+  end
+  assign_rooms(attendees).each do |counter|
+    puts counter
+  end
+end 
+  
     it 'should puts the list of badges and room_assignments' do
       badges_and_room_assignments.each_line do |line|
         # $stdout is a Ruby global varibale that represents the current standard output.
