@@ -9,5 +9,9 @@ new_array = []
 end
 
 def assign_rooms(speakers)
-  
+  new_array = []
+ speakers.each_with_index { |speaker, index|
+   new_array << "Hello, #{speaker}! You'll be assigned to room #{index + 1}!"
+ }
+ new_array
 end
