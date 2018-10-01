@@ -15,3 +15,7 @@ def assign_rooms(speakers)
  }
  new_array
 end
+
+def printer(assign_rooms)
+  assign_rooms.each { |printed| batch_badge_creator(assign_rooms) }
+end
