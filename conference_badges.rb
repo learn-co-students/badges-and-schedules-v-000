@@ -22,6 +22,6 @@ def printer(attendees)
     puts return_value
   end
    assign_rooms(attendees).each do |return_value|
-      puts return_value
+    puts return_value
  end
 end
