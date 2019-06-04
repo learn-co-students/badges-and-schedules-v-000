@@ -1,4 +1,4 @@
-# Badges and Schedules
+ method# Badges and Schedules
 
 ## Objectives
 
